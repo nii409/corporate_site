@@ -1,0 +1,71 @@
+@use "../../global" as g;
+
+.p-sns-share {
+  &__item {
+    display: inline-block;
+    // vertical-align: bottom;
+    // margin-top: 5px;
+    // margin-right: 5px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .p-sns-share {
+    &__item {
+      .twitter-share-button {
+        display: inline-block;
+        width: 300px;
+        height: 30px;
+        vertical-align: bottom;
+      }
+    }
+  }
+  .p-sns-share {
+    &__item {
+      .hatena-bookmark-button {
+        display: inline-block;
+        vertical-align: bottom;
+      }
+    }
+  }
+}
+
+iframe {
+  vertical-align: middle;
+}
+
+a.tw-follow-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 95px;
+	height: 28px;
+	color: #fff;
+	font-size: 13px;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	text-decoration: none;
+	line-height: 1;
+	background-color: #1b95e0;
+	border-radius: 15px;
+	letter-spacing: normal;
+}
+a.tw-follow-btn:hover {
+	background-color: #0c7abf;
+}
+
+.tw-follow-btn:before {
+	content: '\f099';
+	padding-right: 5px;
+	width: 1.5em;
+	height: auto;
+	font-family: FontAwesome;
+}
+
+.fa-hatena {
+  &::before {
+    font-family: Verdana;
+    font-weight: bold;
+    content: "B!";
+    letter-spacing: -.05em;
+  }
+}

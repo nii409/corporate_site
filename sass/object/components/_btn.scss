@@ -1,0 +1,93 @@
+@use "../../global" as g;
+
+.c-btn {
+  position: relative;
+  font-weight: bold;
+  line-height: 1.4;
+  display: inline-block;
+  width: 220px;
+  padding: 18px 0;
+  transition: 0.3s;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 50px;
+  background-image: g.$color-btn;
+  background-size: 200% auto;
+
+  @include g.font-size(14);
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 1.5em;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0da";
+    transition: 0.3s;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    @include g.font-size(14);
+  }
+  &:hover {
+    text-decoration: none;
+    background-position: right center;
+    &::after {
+      right: 1.2em;
+
+      @include g.mq(md) {
+        right: 1.5em;
+      }
+    }
+  }
+
+  &--block {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  &--center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &--transparent {
+    border: 1px solid #fff;
+    background: none;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.c-btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #314755 0%,
+    #26a0da 51%,
+    #314755 100%
+  );
+}
+.c-btn-grad {
+  display: block;
+  margin: 10px;
+  padding: 15px 45px;
+  transition: 0.5s;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 10px;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+}
+
+.c-btn-grad:hover {
+  text-decoration: none;
+  color: #fff;
+  background-position: right center;
+}
